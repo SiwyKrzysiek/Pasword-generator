@@ -29,8 +29,26 @@
           <input type="range" min="8" max="32" step="1" data-bind="value: passwordLength, valueUpdate: 'input'" class="form-inline custom-range col-lg-2 col-md-3 col-sm-4 col-5" id="selectNumberOfCharacters">
         </div>
 
-      <a class="btn btn-primary btn-lg" href="#" role="button">Generate</a>
+        <div class="form-check">
+            <input class="form-check-input" data-bind="checked: numbers" type="checkbox" value="" id="digitsCheck">
+            <label class="form-check-label" for="digitsCheck">
+              Digits
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" data-bind="checked: special" type="checkbox" value="" id="specialCheck">
+            <label class="form-check-label" for="specialCheck">
+              Special characters
+            </label>
+          </div>
+
+      <a class="btn btn-primary" role="button" id="generateButton" style="margin-top: 12px; color: white">Generate</a>
       </form>
+      <div id="passwordDisplay" data-bind="visible: displayPassowrd" style="display: none">
+        <hr class="my-4">
+        <label for="password" class="row"><h3>Your password:</h3></label>
+        <input type="text" class="row" id="password" data-bind="value: password" readonly>       
+      </div>
     </div>
   </div>
 
