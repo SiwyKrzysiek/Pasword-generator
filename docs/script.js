@@ -1,4 +1,4 @@
-function model () {
+function Model () {
     this.passwordLength = ko.observable(15);
     this.password = ko.observable("");
     this.displayPassowrd = ko.pureComputed(function() {
@@ -7,9 +7,11 @@ function model () {
     this.numbers = ko.observable(true);
     this.special = ko.observable(true);
 }
-let viewModel = new model();
+let viewModel;
 
 window.onload = function () {
+    viewModel = new Model();
+
     ko.applyBindings(viewModel);
     document.getElementById("generateButton").onclick = generatePassword;
 }
