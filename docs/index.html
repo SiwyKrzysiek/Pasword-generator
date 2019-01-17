@@ -19,7 +19,7 @@
 
   <div class="container d-flex justify-content-center">
     <div class="jumbotron col-12">
-      <h1 class="display-4">Password generator</h1>
+      <h1>Password generator</h1>
       <p class="lead">This is a password generator build for SoloLearn task.</p>
       <hr class="my-4">
 
@@ -44,7 +44,7 @@
 
       <a class="btn btn-primary" role="button" id="generateButton" style="margin-top: 12px; color: white">Generate</a>
       </form>
-      <div id="passwordDisplay" data-bind="visible: displayPassowrd" style="display: none">
+      <div class="col-12" id="passwordDisplay" data-bind="visible: displayPassowrd" style="display: none">
         <hr class="my-4">
         <label for="password" class="row"><h3>Your password:</h3></label>
         <input type="text" class="row" id="password" data-bind="value: password" readonly>       
